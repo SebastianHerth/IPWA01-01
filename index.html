@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</head>
+
+<script>
+  function showPage(id){
+    let arrPages = document.getElementsByClassName("page");
+    for(var i=0; i<arrPages.length;i++){
+      arrPages[i].style.display="none";
+    }
+    document.getElementById(id).style.display="block";
+  }
+</script>
+
+<style>
+  .disabled{
+    display:none
+  }
+</style>
+
+<body>
+    <!--pixabay.com-->
+    <!--NAV-->   
+    <header>
+
+      <h1>SOS-Kleiderspende</h1>
+
+      <nav class="navbar bg-light" >
+        <div class="container-fluid">
+          
+          <a class="navbar-brand" href="javascript:showPage('main')">Startseite</a>
+          <a class="navbar-brand" href="javascript:showPage('aboutUs')">Über uns</a>
+          <a class="navbar-brand" href="javascript:showPage('donate')">Spenden</a>
+        </div>
+      </nav>
+
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          
+
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" href="#">Startseite</a>
+              <a class="nav-link active" href="#">Über uns</a>
+              <a class="nav-link active" href="#">Spenden</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    
+    <main>
+
+      <section id="main" class="page">
+        <h1>Willkommen</h1>
+      </section>
+
+      <section id="aboutUs" class="page disabled">
+        <h1>Über uns</h1>
+      </section>
+
+      <section id="donate" class="page disabled">
+        <h1>Spenden</h1>
+        
+        <div>
+          <form> 
+            <label for="txtFirstname">Vorname</label>
+            <input id="txtFirstname" type="text">
+
+            <label for="txtLastname">Nachname</label>
+            <input id="txtLastname" type="text">
+
+            <label for="txtStreet">Straße</label>
+            <input id="txtStreet" type="text">
+
+
+          </form>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+
+    </footer>
+    
+    
+
+</body>
+</html>
