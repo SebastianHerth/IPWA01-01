@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</head>
+
+<script>
+  function showPage(id){
+    let arrPages = document.getElementsByClassName("page");
+    for(var i=0; i<arrPages.length;i++){
+      arrPages[i].style.display="none";
+    }
+    document.getElementById(id).style.display="block";
+  }
+  
+  function showSection(id){
+	  if (document.getElementById(id).style.display == "block"){
+		  document.getElementById(id).style.display = "none";
+	  }
+	  else {document.getElementById(id).style.display = "block";}
+  }
+  
+  function submitDonation(){
+	  
+	  alert(document.getElementById("txtHouseNumber").value) ;
+  }
+  
+	
+</script>
+
+<style>
+  .disabled{
+    display:none
+  }
+</style>
+<body>
+    <!--pixabay.com-->
+    <!--NAV-->   
+    <header>
+	
+	  
+
+      <nav class="navbar bg-light row" >
+        <div class="container-fluid">
+		<a class="navbar-brand d-inline-block" href="#"><img height=200 width=200 src="Img/hands-gcfa169249_1920.jpg"/>
+			<h1 class="col-7">SOS-Kleiderspende</h1>
+		</a>
+          
+          <a class="navbar-brand" href="javascript:showPage('main')">Startseite</a>
+          <a class="navbar-brand" href="javascript:showPage('aboutUs')">Über uns</a>
+          <a class="navbar-brand" href="javascript:showPage('donate')">Spenden</a>
+		  <a class="navbar-brand" href="javascript:showPage('')">Mitglied werden</a>
+        </div>
+      </nav>
+
+      
+    </header>
+    
+    <main>
+
+      <section id="main" class="page">
+        <h1>Willkommen</h1>
+		
+		
+      </section>
+
+      <section id="aboutUs" class="page disabled">
+        <h1>Über uns</h1>
+		
+		<hr>
+		<a href="javascript:showSection('ourVision')">Unsere Vision</a>
+		<div id="ourVision" class="disabled" class="col-2">
+			Hier steht die Vision
+		</div>
+		
+		<hr>																	
+		<a href="javascript:showSection('currentProjects')">Aktuelle Hilfsprojekte</a>
+		<div id="currentProjects" class="disabled">
+			Hier stehen aktuelle Projekte
+		</div>
+		
+      </section>
+
+      <section id="donate" class="page disabled">
+        <h1>Spenden</h1>
+        
+        <div>
+			<form method="get" action="html/redirect.html" class="row row-cols-4 row-cols-sm-4 row-cols-md-2">
+           
+            <label for="txtFirstname">Vorname</label>
+            <input id="txtFirstname" type="text" name="firstname">
+
+            <label for="txtLastname">Nachname</label>
+            <input id="txtLastname" type="text" name="lastname">
+
+            <label for="txtStreet">Straße</label>
+            <input id="txtStreet" type="text" name="street">
+
+			<label for="txtHouseNumber">Hausnummer</label>
+            <input id="txtHouseNumber" type="number">
+			
+			<label for="txtPostcode">PLZ</label>
+            <input id="txtPostcode" type="number">
+			
+			<input type="submit" value="Spende"/>
+			
+			
+			
+			<select id="selDonationType">
+				<option></option>
+				<option>Test1</option>
+			</select>
+			
+
+			
+			
+          </form>
+        </div>
+		<div>
+			<form>
+				<div>Zusammenfassung: <span id="outputFirstname"></span></div>
+			</form>
+			
+		</div>
+      </section>
+
+    </main>
+
+    <footer>
+
+    </footer>
+    
+    
+
+</body>
+</html>
