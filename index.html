@@ -1,97 +1,432 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-</head>
+<!doctype html>
 
-<script>
-  function showPage(id){
-    let arrPages = document.getElementsByClassName("page");
-    for(var i=0; i<arrPages.length;i++){
-      arrPages[i].style.display="none";
-    }
-    document.getElementById(id).style.display="block";
-  }
-</script>
+
 
 <style>
-  .disabled{
-    display:none
+  .navbarItem:hover{
+    background-color: lightgrey;
+    border-radius: 5px;
   }
+
+  .projectHeadline{
+    text-decoration: none;
+    font-size: 2.5rem;
+    color:black;
+    font-weight: 500;
+  }
+
+  .disabled{
+    display:none;
+  }
+
+  .img-auto-height{
+    width:100%;
+    height: auto;
+  }
+
+  .footer-link{
+    font-size: 1rem;
+    color:black;
+    text-decoration: none;
+  }
+
+  .footer-text{
+    font-size: 1rem;
+    color:gray;
+  }
+
+  .postcodeAlert{
+    color:red;
+    font-size: 0.8rem;
+
+  }
+
 </style>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  </head>
 
-<body>
-    <!--pixabay.com-->
-    <!--NAV-->   
+  <body>
+
     <header>
-
-      <h1>SOS-Kleiderspende</h1>
-
-      <nav class="navbar bg-light" >
-        <div class="container-fluid">
-          
-          <a class="navbar-brand" href="javascript:showPage('main')">Startseite</a>
-          <a class="navbar-brand" href="javascript:showPage('aboutUs')">Über uns</a>
-          <a class="navbar-brand" href="javascript:showPage('donate')">Spenden</a>
-        </div>
-      </nav>
-
       <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
           
+          <a class="navbar-brand" href="javascript:showPage('pgStart')">
+            <img src="img\logo.png" width="80" height="80">
+          </a>
 
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link active" href="#">Startseite</a>
-              <a class="nav-link active" href="#">Über uns</a>
-              <a class="nav-link active" href="#">Spenden</a>
-            </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+              <li class="nav-item navbarItem">
+                <a class="nav-link active" aria-current="page" href="javascript:showPage('pgAboutUs')" >Über uns</a>
+              </li>
+
+              <li class="nav-item navbarItem">
+                <a class="nav-link active" aria-current="page" href="javascript:showPage('pgProjects')" >Aktuelle Projekte</a>
+              </li>  
+
+              <li class="nav-item navbarItem">
+                <a class="nav-link active" aria-current="page" href="javascript:showPage('pgFormular')">Spenden</a>
+              </li>  
+              
+            </ul>
           </div>
         </div>
       </nav>
     </header>
-    
-    <main>
 
-      <section id="main" class="page">
-        <h1>Willkommen</h1>
-      </section>
+    <main class="pt-5">
 
-      <section id="aboutUs" class="page disabled">
-        <h1>Über uns</h1>
-      </section>
+      <section id="pgStart" class="page" >
+        <H1 class="text-center"> Wilkommen bei SOS-Kleiderspende</H1>
 
-      <section id="donate" class="page disabled">
-        <h1>Spenden</h1>
-        
-        <div>
-          <form> 
-            <label for="txtFirstname">Vorname</label>
-            <input id="txtFirstname" type="text">
+        <div class="container">
+          <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2">
 
-            <label for="txtLastname">Nachname</label>
-            <input id="txtLastname" type="text">
+            <div class="col">
+              <div class="card" style="width: 18rem;">
+                <img src="img\war-g058090453_1280.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Über uns</h5>
+                  <ul>
+                    <li> Eins</li>
+                    <li> Zwei </li>
+                  </ul>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
 
-            <label for="txtStreet">Straße</label>
-            <input id="txtStreet" type="text">
+            <div class="col">
+              <div class="card" style="width: 18rem;">
+                <img src="img\war-g058090453_1280.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Aktuelle Projekte</h5>
+                  <p class="card-text">Erfahren Sie mehr über unsere laufenden Proejekte</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
 
-
-          </form>
+          </div>
         </div>
       </section>
 
+      <section id="pgProjects" class="page disabled">
+
+        <div class="container">
+
+          <a href="javascript:showSection('sectionEthiopia')" class="projectHeadline"> Äthiopien </a>
+          <div id="sectionEthiopia" class="disabled">
+            <div class="row row-cols-1 row-cols-lg-2 ">
+                <div class="col">
+                  <img class="img-auto-height" src="img\group-gffdf8c9ff_1280.jpg">
+                  <span class="img-title">von <a href="https://pixabay.com/de/users/ean254-4188723/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3137670">Ian Ingalula</a> auf <a href="https://pixabay.com/de//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3137670">Pixabay</a></span> 
+                </div>
+                <div class="col">
+                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                  <span>Klicken Sie </span><a href="javascript:testing('Äthiopien')">hier</a> <span> um dieses Projekt mit einer Spende zu unterstützen.</span>
+                </div>
+            </div>
+            
+          </div>
+          <hr>
+          <a href="javascript:showSection('sectionKongo')" class="projectHeadline"> Kongo </a>
+          <div id="sectionKongo" class="disabled">
+            <div class="row row-cols-1 row-cols-lg-2 ">
+                <div class="col">
+                  <img class="img-auto-height" src="img\group-gffdf8c9ff_1280.jpg">
+                  <span class="img-title">von <a href="https://pixabay.com/de/users/ean254-4188723/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3137670">Ian Ingalula</a> auf <a href="https://pixabay.com/de//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3137670">Pixabay</a></span> 
+                </div>
+                <div class="col">
+                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                  <span>Klicken Sie </span><a href="javascript:testing('Kongo')">hier</a> <span> um dieses Projekt mit einer Spende zu unterstützen.</span>
+                </div>
+            </div>
+          </div>
+          <hr>
+          <a href="javascript:showSection('sectionMosambik')" class="projectHeadline"> Mosambik </a>
+          <div id="sectionMosambik" class="disabled">
+            <div class="row row-cols-1 row-cols-lg-2 ">
+                <div class="col">
+                  <img class="img-auto-height" src="img\group-gffdf8c9ff_1280.jpg">
+                  <span class="img-title">von <a href="https://pixabay.com/de/users/ean254-4188723/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3137670">Ian Ingalula</a> auf <a href="https://pixabay.com/de//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3137670">Pixabay</a></span> 
+                </div>
+                <div class="col">
+                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                  <span>Klicken Sie </span><a href="javascript:testing('Mosambik')">hier</a> <span> um dieses Projekt mit einer Spende zu unterstützen.</span>
+                </div>
+            </div>
+          </div>
+          <hr>
+          <a href="javascript:showSection('sectionSyria')" class="projectHeadline"> Syrien </a>
+          <div id="sectionSyria" class="disabled">
+            <div class="row row-cols-1 row-cols-lg-2 ">
+                <div class="col">
+                  <img class="img-auto-height" src="img\group-gffdf8c9ff_1280.jpg">
+                  <span class="img-title">von <a href="https://pixabay.com/de/users/ean254-4188723/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3137670">Ian Ingalula</a> auf <a href="https://pixabay.com/de//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3137670">Pixabay</a></span> 
+                </div>
+                <div class="col">
+                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                  <span>Klicken Sie </span><a href="javascript:testing('Syrien')">hier</a> <span> um dieses Projekt mit einer Spende zu unterstützen.</span>
+                </div>
+            </div>
+          </div>
+          <hr>
+          <a href="javascript:showSection('sectionUkraine')" class="projectHeadline"> Ukraine </a>
+          <div id="sectionUkraine" class="disabled">
+            <div class="row row-cols-1 row-cols-lg-2 ">
+                <div class="col">
+                  <img class="img-auto-height" src="img\group-gffdf8c9ff_1280.jpg">
+                  <span class="img-title">von <a href="https://pixabay.com/de/users/ean254-4188723/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3137670">Ian Ingalula</a> auf <a href="https://pixabay.com/de//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3137670">Pixabay</a></span> 
+                </div>
+                <div class="col">
+                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                  <span>Klicken Sie </span><a href="javascript:testing('Ukraine')">hier</a> <span> um dieses Projekt mit einer Spende zu unterstützen.</span>
+                </div>
+            </div>
+          </div>
+            <!-- hier das nächste Projekt einfügen, Container soll alle Projekte umschließen-->
+        </div>
+      </section>
+
+      <section id="pgAboutUs" class="page disabled">
+        <div class="container">
+          <div>
+            <h1>Unsere Vision</h1>
+            
+          </div>
+          <div>
+            <h1>Meilensteine</h1>
+              <div class="table-responsive">
+                <table class="table">
+                  <tr>
+                    <th>Jahr</th>
+                    <th>Ereignis</th>
+                  </tr>
+                  <tr>
+                    <td>2019</td>
+                    <td>Gründung des Vereins</td>
+                  </tr>
+                  <tr>
+                    <td>2019</td>
+                    <td>Start des Hilfsprojektes Mosambik</td>
+                  </tr>
+                  <tr>
+                    <td>2020</td>
+                    <td>Start der Hilfsprojekte Syrien, Kongo, Äthiopien&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>2021</td>
+                    <td>Ausbau des Vereinshauses zur zentralen Sammelstelle</td>
+                  </tr>
+                  <tr>
+                    <td>2022</td>
+                    <td>Start des Hilfsprojektes Ukraine</td>
+                  </tr>
+                </table>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <section ID="pgFormular" class="page disabled">
+        <div class="container">
+          <form  action="redirect.html" method="GET">
+            
+            <div class="row">
+
+                <div class="form-group col-md-2">
+                  <label for="selectGender">Anrede</label>
+                  <select id="selectGender" class="form-control" aria-placeholder="Anrede" name="gender">
+                    <option>Frau</option>
+                    <option>Herr</option>
+                    <option>Divers</option>
+                    <option selected>Ohne</option>
+                  </select>
+                </div>
+
+
+                <div class="form-group col-md-4">
+                  <label for="inputFirstname">Vorname</label>
+                  <input id="inputFirstname" type="text" class="form-control" placeholder="Vorname" name="firstname">
+                </div>
+
+                <div class="form-group col-md-4">
+                  <label for="inputLastname">Nachname</label>
+                  <input id="inputLastname" type="text" class="form-control" placeholder="Nachname" name="lastname">
+                </div>
+
+            </div>
+
+
+
+            <hr>
+
+            <div class="row">
+              <div class="form-group col-md-4">
+                <label for="selectDeliveryType">Lieferung/Abholung</label>
+                <select id="selectDeliveryType" class="form-control" onchange="deliveryType(this)">
+                  <option value="pickup">Abholung durch Sammelfahrzeug</option>
+                  <option value="delivery">Übergabe an Geschäftsstelle</option>  
+                </select>
+              </div>
+            </div>
+
+            <div id="pickupAddress">
+              <div class="row">
+              
+                  <div class="form-group col-md-3">
+                    <label for="inputPostcode">PLZ</label>
+                    <input id="inputPostcode" type="number" class="form-control" placeholder="PLZ" oninput="checkPostcode()">
+                    <span id="postcodeAlert" class="disabled postcodeAlert">Bitte haben Sie Verständnis dafür, dass wir keine Abholungen außerhalb unserer Region durchführen. Bitte wählen Sie in einem solchen Fall die Übergabe an unserer Geschäftsstelle aus. Vielen Dank. </span>
+                  </div>
+
+
+                  <div class="form-group col-md-5">
+                    <label for="inputCity">Ort</label>
+                    <input id="inputCity" type="text" class="form-control" placeholder="Ort">
+                  </div>
+        
+              </div>
+
+              <div class="row">
+                  <div class="form-group col-md-5">
+                    <label for="inputStreet">Straße</label>
+                    <input id="inputStreet" type="text" class="form-control" placeholder="Straße">
+                  </div>
+              
+                  <div class="form-group col-md-3">
+                    <label for="inputHouseNumber">Hausnummer</label>
+                    <input id="inputHouseNumber" type="text" class="form-control" placeholder="Hausnummer">
+                  </div>
+              </div>
+
+              
+            </div>
+            
+            <hr>
+            
+
+            <div class="row">
+              <div class="form-group col-md-4">
+                <label for="inputClothingDescription">Beschreibung der Kleidung</label>
+                <input id="inputClothingDescription" type="text" class="form-control" placeholder="Beschreibung"> 
+              </div>
+              <div class="form-group col-md-4">
+                <label for="selectProject">Welches Projekt möchten Sie unterstützen?</label>
+                <select id="selectProject" class="form-control" aria-placeholder="Project">
+
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <button type="submit" class="btn btn-primary col-2 mt-4">Submit</button>
+            </div>
+          </form>
+        </div>
+      </section>
     </main>
-
+    
     <footer>
+      <nav class="navbar fixed-bottom bg-light">
+        <div class="container justify-content-left justify-content-lg-center">
+          <div class="row row-cols-1 row-cols-lg-2">
 
+            <div class="col text-center footer-text">
+              <span>© 2019 SOS-Kleiderspende e.V. – All rights reserved.</span>
+            </div>
+
+            <div class="col text-center">
+              <a class="footer-link" href="#">Impressum</a>
+            </div>
+
+          </div>
+          
+        </div>
+      </nav>
     </footer>
-    
-    
 
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    
+<script>
+
+  //Laden aller Projekte in das Spendenformular
+  let strOptions;
+  lstProjects = document.getElementsByClassName("projectHeadline");
+  for (let i = 0; i < lstProjects.length; i++) {
+    strOptions = strOptions + "<option>" + lstProjects[i].innerText + "</option>";
+  }
+  document.getElementById("selectProject").insertAdjacentHTML("afterbegin",strOptions) ;   
+
+  
+  function showPage(pageID){
+    let pages = document.getElementsByClassName("page");
+
+    for (let i = 0; i < pages.length; i++) {
+      pages[i].style.display = "none";
+    }
+    document.getElementById(pageID).style.display = "block";
+  }
+
+  function showSection(sectionID){
+    if (document.getElementById(sectionID).style.display=="block"){
+      document.getElementById(sectionID).style.display="none";
+    }
+    else{
+      document.getElementById(sectionID).style.display="block";
+    }
+  }
+
+  function deliveryType(type){
+    if(type.value=="pickup"){
+      document.getElementById("pickupAddress").style.display="block";
+    }
+    else{
+      document.getElementById("pickupAddress").style.display="none";
+    }
+  }
+
+  function testing(project){
+    showPage("pgFormular");
+    document.getElementById("selectProject").value = project;
+
+  }
+
+  function checkPostcode(){
+    let postcode = document.getElementById("inputPostcode").value;
+    if (postcode.length >= 2){
+      let regioncode = postcode.substring(0,2);
+      if (regioncode == "63"){
+        document.getElementById("postcodeAlert").style.display = "none";
+      }
+      else{
+        document.getElementById("postcodeAlert").style.display = "block";
+      }
+    }
+    else{
+      document.getElementById("postcodeAlert").style.display = "none";
+    }
+  }
+
+  function submit(){
+
+  }
+
+</script>
+  
+  </body>
+  
 </html>
+
