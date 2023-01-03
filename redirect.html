@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Ihre Spende wurde erfolgreich registriert!</h1>
+        <h2>Zusammenfassung:</h2>
+        <ul>
+            <li>Name: <span id="gender"></span><span id="firstname"></span> <span id="lastname"></span></li>
+        </ul>
+    </div>
+
+    <script>
+        
+        getParameter("gender");
+
+        //writeForm("gender","gender");
+       // writeForm("firstname","firstname");
+        //writeForm("lastname","lastname");
+
+
+
+        function writeForm(target, parameter){
+            document.getElementById(target).innerHTML = getParameter(parameter);
+        }
+        
+        
+        function getParameter(parameter){
+            
+            let url = window.location.search.substring(1); // "file:///C:/XAMPP/htdocs/IU/redirect.html?gender=Herr&firstname=testest&lastname=setset" ;
+            alert(url);
+            //alert("test");
+            alert(url.indexOf("?"));
+            let parameters = url.substring(url.indexOf("?")+1, url.length);
+            
+            let parameterList = parameters.split("&");
+            for (let i = 0; i < parameterList.length; i++) {
+                
+                let singleParameter = parameterList[i].split("=");
+                if (parameter == singleParameter[0]){
+                    return(singleParameter[1]);
+                }
+            }
+        }
+        
+
+        function GetURLParameter(sParam)
+{
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++) 
+    {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == sParam) 
+        {
+            return sParameterName[1];
+        }
+    }
+}​
+        
+        
+    </script>
+</body>
+</html>
