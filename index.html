@@ -277,7 +277,7 @@
             <div class="row">
               <div class="form-group col-md-4">
                 <label for="selectDeliveryType">Lieferung/Abholung</label>
-                <select id="selectDeliveryType" class="form-control" onchange="deliveryType(this)">
+                <select id="selectDeliveryType" class="form-control" onchange="deliveryType(this)" name="deliveryType">
                   <option value="pickup">Abholung durch Sammelfahrzeug</option>
                   <option value="delivery">Übergabe an Geschäftsstelle</option>  
                 </select>
@@ -289,14 +289,14 @@
               
                   <div class="form-group col-md-3">
                     <label for="inputPostcode">PLZ</label>
-                    <input id="inputPostcode" type="number" class="form-control" placeholder="PLZ" oninput="checkPostcode()">
+                    <input id="inputPostcode" type="number" class="form-control" placeholder="PLZ" oninput="checkPostcode()" name="postcode">
                     <span id="postcodeAlert" class="disabled postcodeAlert">Bitte haben Sie Verständnis dafür, dass wir keine Abholungen außerhalb unserer Region durchführen. Bitte wählen Sie in einem solchen Fall die Übergabe an unserer Geschäftsstelle aus. Vielen Dank. </span>
                   </div>
 
 
                   <div class="form-group col-md-5">
                     <label for="inputCity">Ort</label>
-                    <input id="inputCity" type="text" class="form-control" placeholder="Ort">
+                    <input id="inputCity" type="text" class="form-control" placeholder="Ort" name="city">
                   </div>
         
               </div>
@@ -304,12 +304,12 @@
               <div class="row">
                   <div class="form-group col-md-5">
                     <label for="inputStreet">Straße</label>
-                    <input id="inputStreet" type="text" class="form-control" placeholder="Straße">
+                    <input id="inputStreet" type="text" class="form-control" placeholder="Straße" name="street">
                   </div>
               
                   <div class="form-group col-md-3">
                     <label for="inputHouseNumber">Hausnummer</label>
-                    <input id="inputHouseNumber" type="text" class="form-control" placeholder="Hausnummer">
+                    <input id="inputHouseNumber" type="text" class="form-control" placeholder="Hausnummer" name="housenumber">
                   </div>
               </div>
 
@@ -322,11 +322,11 @@
             <div class="row">
               <div class="form-group col-md-4">
                 <label for="inputClothingDescription">Beschreibung der Kleidung</label>
-                <input id="inputClothingDescription" type="text" class="form-control" placeholder="Beschreibung"> 
+                <input id="inputClothingDescription" type="text" class="form-control" placeholder="Beschreibung" name="description"> 
               </div>
               <div class="form-group col-md-4">
                 <label for="selectProject">Welches Projekt möchten Sie unterstützen?</label>
-                <select id="selectProject" class="form-control" aria-placeholder="Project">
+                <select id="selectProject" class="form-control" aria-placeholder="Project" name="project">
 
                 </select>
               </div>
