@@ -67,3 +67,56 @@
     </script>
 </body>
 </html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+
+<body>
+    <div class="container">
+        <h1>Ihre Spende wurde erfolgreich registriert!</h1>
+        <h2>Zusammenfassung:</h2>
+        <ul>
+            <li>Name: <span id="gender"></span><span id="firstname"></span> <span id="lastname"></span></li>
+        </ul>
+    </div>
+
+
+</body>
+<script>
+
+
+function getParameter(parameter){
+
+	let url = window.location.search.substring(1);
+	let parameters = url.split("&");
+	
+	for (let i = 0; i < parameters.length; i++) {
+		let singleParameter = parameters[i].split("=");
+		if (parameter == singleParameter[0]){
+		return(singleParameter[1]);
+}
+	}
+
+}
+
+function writeForm(target, parameter){
+            document.getElementById(target).innerHTML = getParameter(parameter);
+        }
+
+writeForm("gender","gender");
+writeForm("firstname","firstname");
+writeForm("lastname","lastname");
+
+</script>
+</html>
