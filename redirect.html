@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
 
 
@@ -14,11 +15,12 @@
     <div class="container">
         <h1>Ihre Spende wurde erfolgreich registriert!</h1>
         <h2>Zusammenfassung:</h2>
-        <ul>
-            <li>Name: <span id="gender"></span> <span id="firstname"></span> <span id="lastname"></span></li>
-            <li><span id="deliveryType"></span></li>
-            <li><span id="street"></span> <span id="housenumber"></span></li>
-            <li><span id="postcode"></span> <span id="city"></span></li>
+        <ul class="list-group">
+            <li class="list-group-item">Datum/Uhrzeit: <span id="date"> </span></li>
+            <li class="list-group-item">Name: <span id="gender"></span> <span id="firstname"></span> <span id="lastname"></span></li>
+            <li class="list-group-item"><span id="deliveryType"></span></li>
+            <li class="list-group-item"><span id="street"></span> <span id="housenumber"></span></li>
+            <li class="list-group-item"><span id="postcode"></span> <span id="city"></span></li>
         </ul>
         
     </div>
@@ -42,11 +44,38 @@ function getParameter(parameter){
 
 }
 
-function writeForm(target, parameter){
-    document.getElementById("gender").innerHTML = getParameter("gender");
-    document.getElementById("firstname").innerHTML = decodeURI(getParameter("firstname"));
-    document.getElementById("lastname").innerHTML = decodeURI(getParameter("lastname"));
+function writeForm(){
+    let today = new Date();
+    let day = today.getDate();
+    let month = today.getMonth();
+    let year = today.getFullYear();
+    let time = today.getHours() + ":" + today.getMinutes();
+
+    month = month + 1;
+    if (String(day).length == 1){
+        day = '0' + day;
+    }
+    if (String(month).length == 1){
+        month = '0' + month;
+    }
     
+    let firstname = decodeURI(getParameter("firstname"));
+    let lastname = decodeURI(getParameter("lastname"))
+
+    //LÖSCHEN
+    firstname = "Sebastian";
+    lastname = "Herth";
+
+    //
+    // Hier ist der ID-Code - Eventuell in eigene FUnktion
+    let IDCode = firstname.substring(0,1) + lastname.substring(0,1) + day + month + String(year).substring(2,4) + today.getSeconds();
+    
+    document.getElementById("date").innerHTML = day + '.' + month + '.' + year + ', ' + time;
+    document.getElementById("gender").innerHTML = getParameter("gender");
+    document.getElementById("firstname").innerHTML = firstname;
+    document.getElementById("lastname").innerHTML = lastname;
+    
+
     if(getParameter("deliveryType")=="pickup"){
         document.getElementById("deliveryType").innerHTML = "Abholung durch Sammelfahrzeug an folgender Adresse:";
         document.getElementById("street").innerHTML = decodeURI(getParameter("street"));
@@ -58,13 +87,9 @@ function writeForm(target, parameter){
         
 }
 
-function test(){
-//WICHTIG https://www.youtube.com/watch?v=M3FW_ihCNWo
-}
 
-writeForm("gender","gender");
-writeForm("firstname","firstname");
-writeForm("lastname","lastname");
+
+writeForm();
 
 </script>
 </html>
