@@ -38,8 +38,18 @@
   .postcodeAlert{
     color:red;
     font-size: 0.8rem;
-
   }
+
+  .imgInText{
+    width : 40%;
+    height : auto;
+    float: left;
+  }
+
+  .mandatory-star{
+    color:red;
+  }
+
 
 </style>
 <html lang="en">
@@ -48,6 +58,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  
   </head>
 
   <body>
@@ -94,27 +105,50 @@
           <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2">
 
             <div class="col">
-              <div class="card" style="width: 18rem;">
-                <img src="img\war-g058090453_1280.jpg" class="card-img-top" alt="...">
+              <div class="card my-4" style="width: 18rem;">
+                <img src="img\baby-shoes-gbc5be4be2_640.jpg" class="card-img-top" alt="...">
+                <p class="small">Bild von <a href="https://pixabay.com/de/users/sebagee-154213/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=505471">Sebastian</a> auf <a href="https://pixabay.com/de//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=505471">Pixabay</a></p>
                 <div class="card-body">
                   <h5 class="card-title">Über uns</h5>
-                  <ul>
-                    <li> Eins</li>
-                    <li> Zwei </li>
-                  </ul>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+
+                  <p class="card-text">Zahlen und Fakten zu SOS-Kleiderspende e.V.</p>
+                  <a href="#" class="btn btn-primary">Hierhin</a>
                 </div>
               </div>
             </div>
 
             <div class="col">
-              <div class="card" style="width: 18rem;">
-                <img src="img\war-g058090453_1280.jpg" class="card-img-top" alt="...">
+              <div class="card my-4" style="width: 18rem;">
+                <img src="img\hands-g50dcf1077_640.jpg" class="card-img-top" alt="...">
+                <p class="small">Bild von <a href="https://pixabay.com/de/users/jarmoluk-143740/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2847508">Michal Jarmoluk</a> auf <a href="https://pixabay.com/de//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2847508">Pixabay</a></p>
                 <div class="card-body">
                   <h5 class="card-title">Aktuelle Projekte</h5>
                   <p class="card-text">Erfahren Sie mehr über unsere laufenden Proejekte</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                  <a href="#" class="btn btn-primary">Los</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card my-4" style="width: 18rem;">
+                <img src="img\hand-g6e1f41556_640.jpg" class="card-img-top" alt="...">
+                <p class="small">Bild von <a href="https://pixabay.com/de/users/sweetlouise-3967705/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2710098">Luisella Planeta</a> auf <a href="https://pixabay.com/de//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2710098">Pixabay</a></p>
+                <div class="card-body">
+                  <h5 class="card-title">Spenden</h5>
+                  <p class="card-text">Jetzt eine Spende von Altkleidung anmelden</p>
+                  <a href="#" class="btn btn-primary">Los</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card my-4" style="width: 18rem;">
+                <img src="img\imprint-g3b7a7bbb9_640.jpg" class="card-img-top" alt="...">
+                <p class="small">Bild von <a href="https://pixabay.com/de/users/sophieja23-698836/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=695764">Sophie Janotta</a> auf <a href="https://pixabay.com/de//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=695764">Pixabay</a></p>
+                <div class="card-body">
+                  <h5 class="card-title">Impressum</h5>
+                  <p class="card-text"></p>
+                  <a href="javascript:showPage('pgImpressum')" class="btn btn-primary">Los</a>
                 </div>
               </div>
             </div>
@@ -123,7 +157,7 @@
         </div>
       </section>
 
-      <section id="pgProjects" class="page disabled">
+      <section id="pgProjects" class="page disabled mt-2">
 
         <div class="container">
 
@@ -131,11 +165,11 @@
           <div id="sectionEthiopia" class="disabled">
             <div class="row row-cols-1 row-cols-lg-2 ">
                 <div class="col">
-                  <img class="img-auto-height" src="img\group-gffdf8c9ff_1280.jpg">
-                  <span class="img-title">von <a href="https://pixabay.com/de/users/ean254-4188723/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3137670">Ian Ingalula</a> auf <a href="https://pixabay.com/de//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3137670">Pixabay</a></span> 
+                  <img class="img-auto-height" src="img\child-4667641_1280.jpg">
+                  <span class="img-title">von <a href="https://pixabay.com/de/users/mustafacevcek-5534223/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4667641">Mustafa cevcek</a> auf <a href="https://pixabay.com/de//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4667641">Pixabay</a></span> 
                 </div>
                 <div class="col">
-                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                  <p> Seit Jahren leidet die Bevölkerung von Äthiopien unter einer anhaltenden Dürre und unter massiver Armut. Unsere Altkleidung wird von einer zentralen Sammelstelle im ganzen Land bis in die kleisnten Dörfer Äthiopiens verteilt. </p>
                   <span>Klicken Sie </span><a href="javascript:testing('Äthiopien')">hier</a> <span> um dieses Projekt mit einer Spende zu unterstützen.</span>
                 </div>
             </div>
@@ -146,11 +180,11 @@
           <div id="sectionKongo" class="disabled">
             <div class="row row-cols-1 row-cols-lg-2 ">
                 <div class="col">
-                  <img class="img-auto-height" src="img\group-gffdf8c9ff_1280.jpg">
-                  <span class="img-title">von <a href="https://pixabay.com/de/users/ean254-4188723/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3137670">Ian Ingalula</a> auf <a href="https://pixabay.com/de//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3137670">Pixabay</a></span> 
+                  <img class="img-auto-height" src="img\children-g5af4e3c33_1280.jpg">
+                  <span class="img-title">Bild von <a href="https://pixabay.com/de/users/mckenny_nicolas-21994399/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=6647076">Mckenny nicolas</a> auf <a href="https://pixabay.com/de//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=6647076">Pixabay</a></span> 
                 </div>
                 <div class="col">
-                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                  <p>Kämpfe zwischen verfeindeten Gruppierungen, Hunger und Krankheit sind in vielen Regionen Kongos Alltag. Wir unterstüztzen Hilfseinrichtungen, die Kleidung, Lebensmittel und Medikamente in die abgeschnittenen Provinzen Kongos verteilen.</p>
                   <span>Klicken Sie </span><a href="javascript:testing('Kongo')">hier</a> <span> um dieses Projekt mit einer Spende zu unterstützen.</span>
                 </div>
             </div>
@@ -164,7 +198,7 @@
                   <span class="img-title">von <a href="https://pixabay.com/de/users/ean254-4188723/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3137670">Ian Ingalula</a> auf <a href="https://pixabay.com/de//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3137670">Pixabay</a></span> 
                 </div>
                 <div class="col">
-                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                  <p>Wiederholt kommt es in Mosambik zu heftigen Kämpfen zwischen bewaffneten Gruppen, mit der Folge, dass seit Jahren Hunderttausende Menschen um ihr Leben fliehen. Seit 2019 unterstützen wir lokale Flüchtlingslager mit Altkleiderspenden.</p>
                   <span>Klicken Sie </span><a href="javascript:testing('Mosambik')">hier</a> <span> um dieses Projekt mit einer Spende zu unterstützen.</span>
                 </div>
             </div>
@@ -174,11 +208,11 @@
           <div id="sectionSyria" class="disabled">
             <div class="row row-cols-1 row-cols-lg-2 ">
                 <div class="col">
-                  <img class="img-auto-height" src="img\group-gffdf8c9ff_1280.jpg">
+                  <img class="img-auto-height" src="img\child-g67815002f_1280.jpg">
                   <span class="img-title">von <a href="https://pixabay.com/de/users/ean254-4188723/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3137670">Ian Ingalula</a> auf <a href="https://pixabay.com/de//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3137670">Pixabay</a></span> 
                 </div>
                 <div class="col">
-                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                  <p>Seit der Coronakrise hat sich die wirtschaftliche Situation in Syrien weiter verschlechtert. Neben der hohen Inflation, kämpft die Bevölkerung mit Wasser- und Nahrungsmittelknappheit. Wir unterstützen diverse Hilfsorganisationen, die unsere Altkleidung neben anderen Hilfsgüter an die bedürftigen Menschen in Syrien verteilen.</p>
                   <span>Klicken Sie </span><a href="javascript:testing('Syrien')">hier</a> <span> um dieses Projekt mit einer Spende zu unterstützen.</span>
                 </div>
             </div>
@@ -188,11 +222,11 @@
           <div id="sectionUkraine" class="disabled">
             <div class="row row-cols-1 row-cols-lg-2 ">
                 <div class="col">
-                  <img class="img-auto-height" src="img\group-gffdf8c9ff_1280.jpg">
-                  <span class="img-title">von <a href="https://pixabay.com/de/users/ean254-4188723/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3137670">Ian Ingalula</a> auf <a href="https://pixabay.com/de//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3137670">Pixabay</a></span> 
+                  <img class="img-auto-height" src="img\buildings-g16f87816e_1280.jpg">
+                  <span class="img-title">von <a href="https://pixabay.com/de/users/nextvoyage-5275305/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=7120297">Andrzej</a> auf <a href="https://pixabay.com/de//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=7120297">Pixabay</a></span> 
                 </div>
                 <div class="col">
-                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                  <p>Seit Februar 2022 befindet sich die Ukraine in einem Krieg mit Russland. Die Folgen für die Zivilbevölkerung sind Katastrophal und tausende Menschen befinden sich auf der Flucht. Mit unserer Altkleidung unterstützen wir lokale Hilfsorganisationen.</p>
                   <span>Klicken Sie </span><a href="javascript:testing('Ukraine')">hier</a> <span> um dieses Projekt mit einer Spende zu unterstützen.</span>
                 </div>
             </div>
@@ -203,12 +237,22 @@
 
       <section id="pgAboutUs" class="page disabled">
         <div class="container">
-          <div>
-            <h1>Unsere Vision</h1>
+          <h2>Unsere Vision</h1>
+          <div class="row row-cols-1 row-cols-lg-2">
+            <div class="col">
+              <img class="img-auto-height col" src="img\houses-g69c297d4a_640.jpg">
+              Erste Abgabestelle für Kleierspenden
+              <p>(Bild von <a href="https://pixabay.com/de/users/cliffoa-120754/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=258377">cliffoa</a> auf <a href="https://pixabay.com/de//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=258377">Pixabay</a>)</p>
+            </div>
+            <div class="col">
+              <p>Nicht nur Nahrung und Wasser wird dringend in Krisengebieten benötigt - Auch Kleidung kann Leben retten! Wir haben uns zur Aufgabe gemacht, Altkleidung weltweit zu den Menschen in Krisengebieten zu bringen. Dabei bestimmen <strong>Sie </strong>, welches Ziel Ihre Spende erreichen soll.</p> 
+              <p>Aktuell leisten wir in 5 weltweiten Krisengebieten Unterstützungsleistungen durch Altkleiderspenden. Weitere Hilfsprojekte sind in Planung, ebenso arbeiten wir mit Hochdruck daran, unser Netzwerk in Deutschland auszubauen und somit weitere Annahmestellen für Spenden bereitzustellen.</p>
+            </div>
             
           </div>
-          <div>
-            <h1>Meilensteine</h1>
+ 
+          <div mt-4>
+            <h2 class="mt-4">Meilensteine</h1>
               <div class="table-responsive">
                 <table class="table">
                   <tr>
@@ -238,77 +282,108 @@
                 </table>
               </div>
           </div>
+
+          <div class="mt-4 mb-4">
+            <h2>Zahlen <small>(Stand Dez/2022)</small></h1>
+            <ul>
+              <li>Mehr als 500 ständige Mitglieder und Unterstützer!</li>
+              <li>Über 2.000 Spenden erfolgreich zugestellt!</li>
+              <li>Hilfsprojekte in 5 Ländern!</li>
+              <li>4 neue Annahmestellen in verschiedenen Bundesländern für 2023 geplant!</li>
+              <li>3 weitere Hilfsprojekte sind zurzeit in Planung!</li>
+
+            </ul>
+          </div>
         </div>
       </section>
 
       <section ID="pgFormular" class="page disabled">
         <div class="container">
-          <form  action="redirect.html" method="GET">
+          <form  action="redirect.html" method="GET" onsubmit="return chkForm()">
             
             <div class="row">
+              <h3>Name des Spendenden</h3>
+              <div class="form-group col-md-2 my-1">
+                <label for="selectGender">Anrede</label>
+                <select id="selectGender" class="form-control" aria-placeholder="Anrede" name="gender">
+                  <option>Frau</option>
+                  <option>Herr</option>
+                  <option>Divers</option>
+                  <option selected>Ohne</option>
+                </select>
+              </div>
 
-                <div class="form-group col-md-2">
-                  <label for="selectGender">Anrede</label>
-                  <select id="selectGender" class="form-control" aria-placeholder="Anrede" name="gender">
-                    <option>Frau</option>
-                    <option>Herr</option>
-                    <option>Divers</option>
-                    <option selected>Ohne</option>
-                  </select>
-                </div>
+              <div class="form-group col-md-3 my-1">
+                <label for="inputFirstname">Vorname<span class="mandatory-star">*</span></label>
+                <input id="inputFirstname" pattern="[A-Za-z]+" type="text" class="form-control" placeholder="Vorname" name="firstname">
+              </div>
 
+              <div class="form-group col-md-3 my-1">
+                <label for="inputLastname">Nachname<span class="mandatory-star">*</span></label>
+                <input id="inputLastname" pattern="[A-Za-z]+" type="text" class="form-control" placeholder="Nachname" name="lastname">
+              </div>
 
-                <div class="form-group col-md-4">
-                  <label for="inputFirstname">Vorname</label>
-                  <input id="inputFirstname" type="text" class="form-control" placeholder="Vorname" name="firstname">
-                </div>
+            </div>
 
-                <div class="form-group col-md-4">
-                  <label for="inputLastname">Nachname</label>
-                  <input id="inputLastname" type="text" class="form-control" placeholder="Nachname" name="lastname">
-                </div>
-
+            <div class="row mt-3">
+              <hr>
+              <h3>Wie erreichen wir Sie?</h3>
+              <p>Bitte eine Telefonnummer und/oder eine E-Mailadresse eingeben.</p>
+              <div class="form-group col-md-3 mb-1">
+                <label for="inputPhone">Telefonnummer</label>
+                <input id="inputPhone" pattern="[0-9]+" type="number" class="form-control" placeholder="Telefonnummer" name="phone">
+              </div>
+              <div class="form-group col-md-5 my-1">
+                <label for="inputMail">E-Mailadresse</label>
+                <input id="inputMail" pattern="[^><]+" type="text" class="form-control" placeholder="E-Mail" name="mail">
+              </div>
             </div>
 
 
 
-            <hr>
+            
 
-            <div class="row">
-              <div class="form-group col-md-4">
+            <div class="row mt-3">
+              <hr>
+              <h3>Wie soll die Spende erfolgen?</h3>
+              <div class="form-group col-md-4 my-1">
                 <label for="selectDeliveryType">Lieferung/Abholung</label>
-                <select id="selectDeliveryType" class="form-control" onchange="deliveryType(this)" name="deliveryType">
+                <select id="selectDeliveryType" class="form-control" onchange="chkDeliveryType(this)" name="deliveryType">
                   <option value="pickup">Abholung durch Sammelfahrzeug</option>
                   <option value="delivery">Übergabe an Geschäftsstelle</option>  
                 </select>
               </div>
             </div>
 
+            <div id="deliveryInformation" class="disabled">
+              <p><small>Bei einer Übergabe an unserer Geschäftsstelle, bringen Sie bitte die Altkleidung in einer geeigneten und sauberen Verpackung (z.B. Karton oder Müllsack) an unsere Annahmestelle in Musterstraße 12, 12345 Musterstadt. Nach erfolgreicher Registrierung der Spende wird ein Code generiert. Bitte legen Sie Ihrer Spende diesen Code bei, alternativ können Sie auch die Verpackung mit dem Code beschriften.</small></p>
+            </div>
+
             <div id="pickupAddress">
               <div class="row">
               
-                  <div class="form-group col-md-3">
-                    <label for="inputPostcode">PLZ</label>
+                  <div class="form-group col-md-3 my-1">
+                    <label for="inputPostcode">PLZ<span class="mandatory-star">*</span></label>
                     <input id="inputPostcode" type="number" class="form-control" placeholder="PLZ" oninput="checkPostcode()" name="postcode">
                     <span id="postcodeAlert" class="disabled postcodeAlert">Bitte haben Sie Verständnis dafür, dass wir keine Abholungen außerhalb unserer Region durchführen. Bitte wählen Sie in einem solchen Fall die Übergabe an unserer Geschäftsstelle aus. Vielen Dank. </span>
                   </div>
 
 
-                  <div class="form-group col-md-5">
-                    <label for="inputCity">Ort</label>
+                  <div class="form-group col-md-5 my-1">
+                    <label for="inputCity">Ort<span class="mandatory-star">*</span></label>
                     <input id="inputCity" type="text" class="form-control" placeholder="Ort" name="city">
                   </div>
         
               </div>
 
               <div class="row">
-                  <div class="form-group col-md-5">
-                    <label for="inputStreet">Straße</label>
+                  <div class="form-group col-md-5 my-1">
+                    <label for="inputStreet">Straße<span class="mandatory-star">*</span></label>
                     <input id="inputStreet" type="text" class="form-control" placeholder="Straße" name="street">
                   </div>
               
-                  <div class="form-group col-md-3">
-                    <label for="inputHouseNumber">Hausnummer</label>
+                  <div class="form-group col-md-3 my-1">
+                    <label for="inputHouseNumber">Hausnummer<span class="mandatory-star">*</span></label>
                     <input id="inputHouseNumber" type="text" class="form-control" placeholder="Hausnummer" name="housenumber">
                   </div>
               </div>
@@ -320,11 +395,12 @@
             
 
             <div class="row">
-              <div class="form-group col-md-4">
-                <label for="inputClothingDescription">Beschreibung der Kleidung</label>
+              <h3>Information zu Ihrer Spende</h3>
+              <div class="form-group col-md-4 my-1">
+                <label for="inputClothingDescription">Beschreibung der Kleidung<span class="mandatory-star">*</span></label>
                 <input id="inputClothingDescription" type="text" class="form-control" placeholder="Beschreibung" name="description"> 
               </div>
-              <div class="form-group col-md-4">
+              <div class="form-group col-md-4 my-1">
                 <label for="selectProject">Welches Projekt möchten Sie unterstützen?</label>
                 <select id="selectProject" class="form-control" aria-placeholder="Project" name="project">
 
@@ -337,9 +413,31 @@
           </form>
         </div>
       </section>
+
+
+
+        
+      <section ID="pgImpressum" class="page disabled text-center">
+
+          <h1>Impressum</h1>
+          <br>
+          <p>SOS-Kleiderspende e.V.</p>
+          <p>Musterstraße 12</p>
+          <p>12345 Musterstadt</p>
+          <p class="fw-bold">Tel.: <span class="fw-normal">+49 (0) 1234-4567</span></p>
+          <p class="fw-bold">E-Mail: <span class="fw-normal">mustermail@sos-kleiderspende.de</span></p>
+          <br>
+          <h2>Vertretungsberechtigter Vorstand</h1>
+          <p>Max Mustermann (1. Vorsitzender) </p>
+          <p>Erika Mustermann (2. Vorsitzende) </p>
+
+        
+        
+        
+      </section>
     </main>
     
-    <footer>
+    <footer class="my-5 pt-5">
       <nav class="navbar fixed-bottom bg-light">
         <div class="container justify-content-left justify-content-lg-center">
           <div class="row row-cols-1 row-cols-lg-2">
@@ -349,7 +447,7 @@
             </div>
 
             <div class="col text-center">
-              <a class="footer-link" href="#">Impressum</a>
+              <a class="footer-link" href="javascript:showPage('pgImpressum')">Impressum</a>
             </div>
 
           </div>
@@ -362,15 +460,61 @@
     
 <script>
 
-  //Laden aller Projekte in das Spendenformular
-  let strOptions;
-  lstProjects = document.getElementsByClassName("projectHeadline");
-  for (let i = 0; i < lstProjects.length; i++) {
-    strOptions = strOptions + "<option>" + lstProjects[i].innerText + "</option>";
+  fillProjectField();
+  function fillProjectField(){//Laden aller Projekte in das Spendenformular
+    let strOptions;
+    lstProjects = document.getElementsByClassName("projectHeadline");
+    for (let i = 0; i < lstProjects.length; i++) {
+      strOptions = strOptions + "<option>" + lstProjects[i].innerText + "</option>";
+    }
+    document.getElementById("selectProject").insertAdjacentHTML("afterbegin",strOptions) ;   
   }
-  document.getElementById("selectProject").insertAdjacentHTML("afterbegin",strOptions) ;   
 
-  
+  function chkForm(){
+    let chkList = ["inputFirstname","inputLastname", "inputClothingDescription"];
+    let alertText = "";
+    if(document.getElementById("selectDeliveryType").value == "pickup"){
+      chkList.push("inputStreet","inputHouseNumber","inputCity","inputPostcode")
+    }
+    let formCheck = true;
+
+    for (let i = 0; i < chkList.length; i++) {
+      const inputID = chkList[i];
+      if(document.getElementById(inputID).value==""){
+      document.getElementById(inputID).style.borderColor = "red";
+      formCheck =  false;
+      }
+      else{
+        document.getElementById(inputID).style.borderColor = "#ced4da" ;
+      }
+    }
+
+    if(formCheck==false){
+      alertText ="Bitte alle Pflichtfelder ausfüllen!";
+    }
+    if(document.getElementById("inputMail").value == "" && document.getElementById("inputPhone").value == "" ){
+      document.getElementById("inputMail").style.borderColor = "orange";
+      document.getElementById("inputPhone").style.borderColor = "orange";
+      alertText = alertText + " Bitte eine Telefonnummer ODER eine E-Mailadresse eintragen!"
+      formCheck =  false;
+    }
+    else{
+      document.getElementById("inputMail").style.borderColor = "#ced4da";
+      document.getElementById("inputPhone").style.borderColor = "#ced4da";
+    }
+
+    if(document.getElementById("postcodeAlert").style.display == "block"){
+      document.getElementById("inputPostcode").style.borderColor="red"
+      formCheck = false;
+    }
+    
+
+    if(formCheck==false){
+      alert(alertText);
+    }
+    return formCheck;
+  }
+
   function showPage(pageID){
     let pages = document.getElementsByClassName("page");
 
@@ -389,12 +533,14 @@
     }
   }
 
-  function deliveryType(type){
+  function chkDeliveryType(type){
     if(type.value=="pickup"){
       document.getElementById("pickupAddress").style.display="block";
+      document.getElementById("deliveryInformation").style.display ="none";
     }
     else{
       document.getElementById("pickupAddress").style.display="none";
+      document.getElementById("deliveryInformation").style.display ="block";
     }
   }
 
