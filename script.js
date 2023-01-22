@@ -220,10 +220,10 @@
       }
       else{
           document.getElementById("deliveryType").innerHTML = "Persönliche Übergabe an unserer Geschäftsstelle:";
-          document.getElementById("street").innerHTML = "Musterstraße";
-          document.getElementById("housenumber").innerHTML = "12";
-          document.getElementById("postcode").innerHTML = "12345";
-          document.getElementById("city").innerHTML = "Musterstadt";
+          document.getElementById("street").innerHTML = HomeStreet;
+          document.getElementById("housenumber").innerHTML = HomeHousenumber;
+          document.getElementById("postcode").innerHTML = HomePostcode;
+          document.getElementById("city").innerHTML = HomeCity;
       }  
   }
   
