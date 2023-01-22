@@ -172,7 +172,7 @@
       let phone = getParameter("phone");
       let gender = getParameter("gender");
       let mail = decodeURIComponent(getParameter("mail"));
-      let description = decodeURIComponent(getParameter("description").replace(/\+/g, ' '));
+      let description = decodeURIComponent(getParameter("description").replace(/\+/g, ' ')); //Plus-Zeichen durch Leerstellen ersetzen
       let project = decodeURIComponent(getParameter("project"));
       let street = decodeURIComponent(getParameter("street"));
       let housenumber = getParameter("housenumber");
